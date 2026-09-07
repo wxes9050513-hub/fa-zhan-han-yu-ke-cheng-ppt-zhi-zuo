@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "workflow-demo",
+  "title": "教材流程功能示範",
+  "course": "KN2",
+  "sources": [{
+    "id": "demo-source",
+    "name": "功能示範，非課本教材",
+    "pages": [{"number": "demo-1", "text": "功能測試用的自編材料，並非《發展漢語》課本原文。\n问：你今天过得怎么样？\n答：我今天过得很好，因为我学会了做一道菜。", "reviewedText": null}]
+  }],
+  "vocabulary": [],
+  "items": [{
+    "id": "demo-question",
+    "type": "exercise",
+    "title": "说说今天",
+    "origin": "supplement",
+    "sourceId": "demo-source",
+    "pages": ["demo-1"],
+    "objective": "用完整句回答近況，並說出一個原因。",
+    "exerciseType": "question-answer",
+    "exception": "",
+    "notes": "只示範教材核對與重新生成流程；實際授課須使用本課教材。",
+    "review": null,
+    "blocks": [
+      {"id":"demo-title","role":"title","type":"text","text":"说说今天","backText":"","annotations":[]},
+      {"id":"demo-instruction","role":"instruction","type":"text","text":"Làm việc theo cặp. Mỗi người hỏi và trả lời bằng một câu hoàn chỉnh.","backText":"","annotations":[]},
+      {"id":"demo-body","role":"body","type":"reveal","text":"你今天过得怎么样？","backText":"我今天过得很好，因为我学会了做一道菜。","annotations":[]}
+    ]
+  }]
+}

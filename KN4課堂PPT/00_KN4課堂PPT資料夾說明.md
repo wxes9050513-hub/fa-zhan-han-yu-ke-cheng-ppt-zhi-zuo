@@ -4,8 +4,11 @@
 
 ## 使用系統
 
-- 製作工具：`ai-teaching-material-system-main`
-- 輸出形式：HTML 課堂投影片
+- 新課或內容變更：先讀課本與教師核可資料，在 editor 的教材資料庫建立／更新教材包、逐頁 `sources` 與結構化 `items`，核對後按 UI 生成或用可選的 `scripts/build_course.cjs` 生成 `.slides.json`；editor/ 只在生成後作可選手動微調，再匯出 HTML 課堂投影片。
+- 既有舊課：可沿用朋友本機的 `ai-teaching-material-system-main` 產生器；它是舊產生器路線，不是 editor 的必要依賴。
+- `scripts/prepare_lesson_package.py` 可整理文字檔與有文字層的原生 PDF；掃描 PDF 沒有文字時需先取得 OCR，不能臆造內容。AI／教師整理 `items` 不等於教師核可，程式結構檢查也不取代語意與程度判定。
+- 符合 `頁碼`、`檔名`、`投影片畫面文字` 欄位的 Markdown `HTML_PPT製作稿` 匯入 editor 只建立保留全部列的待溯源文字草稿，不會重建舊版面、圖片配置或互動；未完成來源與核對前不得正式放映或匯出，但始終可下載備份。
+- editor 路線以 `.slides.json` 的 `slides` 陣列作為顯示順序；不要把舊產生器的 HTML、Manifest 或 QA 勾選當成 editor 已支援的功能。
 - 課堂語言規則：
   - 說明文字使用越南語。
   - 中文內容使用簡體中文。
@@ -48,6 +51,7 @@
 |---|---|
 | `{{lesson}}課堂PPT架構.md` | 該課完整課堂頁面規劃。 |
 | `{{lesson}}課堂PPT教師審核稿.md` | 供教師確認內容、時間、語言、頁面設計。 |
-| `{{lesson}}HTML_PPT製作稿.md` | 教師審核通過後，轉成 HTML 製作用的最後內容稿。 |
+| `{{lesson}}HTML_PPT製作稿.md` | 舊產生器路線的頁面與內容記錄；editor 只可把符合欄位的表格作待溯源文字草稿，不能當教材包或版面重建來源。 |
 | `素材整理/` | 圖片、音檔、課本截圖、補充資料。 |
-| `HTML輸出連結.md` | 記錄 HTML presenter、PDF 備份與輸出位置。 |
+| `{{lesson}}.slides.json` | 教材包生成後的可攜來源，保存 `lessonPackage`、逐頁 `sources`、`items`、頁面順序、固定 ID、文字、圖片、位置、`layoutOverrides` 與教師備註。內容變更回寫 `items` 並重核對；版面變更由 `layoutOverrides` 保留。 |
+| `HTML輸出連結.md` | 若使用舊產生器，記錄 HTML presenter、PDF 備份與輸出位置；editor 路線記錄教材包生成的 JSON 與匯出 HTML 檔名。 |

@@ -1,0 +1,255 @@
+{
+  "before": [
+    {
+      "scope": "draft structure only",
+      "sha256": "1b7b85d5bad88d0007a996ec2adf3f70cc5ba7feeb1302df24c87ad30b2778c2",
+      "slideCount": 50,
+      "errors": [],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output."
+      ],
+      "draft": "KN2課堂PPT/L1_我哪儿都没去过/KỸ NĂNG NÓI 2-L1_HTML_PPT製作稿.md"
+    },
+    {
+      "scope": "draft structure only",
+      "sha256": "f3d2f3b6ab2cf6bb041dcfe875a0b9084db94efc046fd6276c1d0696811a62d9",
+      "slideCount": 57,
+      "errors": [
+        "line 15: stated total 54; actual production rows 57",
+        "line 23: stated total 54; actual production rows 57",
+        "line 97: stated total 56; actual production rows 57",
+        "line 98: stated total 56; actual production rows 57"
+      ],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output."
+      ],
+      "draft": "KN2課堂PPT/L2_晚上早点儿睡/KỸ NĂNG NÓI 2-L2_HTML_PPT製作稿.md"
+    },
+    {
+      "scope": "draft structure only",
+      "sha256": "bfff316b9f61fc3f263e41b1d772108b8c287c75cd41a650d318741f579f15c8",
+      "slideCount": 60,
+      "errors": [],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output."
+      ],
+      "draft": "KN4課堂PPT/L1_在家靠父母，出门靠朋友/KỸ NĂNG NÓI 4-L1_HTML_PPT製作稿.md"
+    },
+    {
+      "scope": "draft structure only",
+      "sha256": "922102c86c49a974199dfb3501d47fa2e9cdaf25d587269ce95a5b8366e7db8b",
+      "slideCount": 60,
+      "errors": [
+        "line 88: page number must be an integer; found '49.1'",
+        "line 91: page number must be an integer; found '51.1'",
+        "line 94: page number must be an integer; found '53.1'",
+        "line 97: page number must be an integer; found '55.1'",
+        "line 100: page number must be an integer; found '57.1'",
+        "line 58: ordered row 17 uses page 18",
+        "line 59: ordered row 18 uses page 19",
+        "line 60: ordered row 19 uses page 20",
+        "line 61: ordered row 20 uses page 21",
+        "line 62: ordered row 21 uses page 22",
+        "line 63: ordered row 22 uses page 23",
+        "line 64: ordered row 23 uses page 24",
+        "line 65: ordered row 24 uses page 25",
+        "line 66: ordered row 25 uses page 26",
+        "line 67: ordered row 26 uses page 27",
+        "line 68: ordered row 27 uses page 28",
+        "line 69: ordered row 28 uses page 29",
+        "line 70: ordered row 29 uses page 30",
+        "line 71: ordered row 30 uses page 31",
+        "line 72: ordered row 31 uses page 32",
+        "line 73: ordered row 32 uses page 33",
+        "line 74: ordered row 33 uses page 34",
+        "line 75: ordered row 34 uses page 35",
+        "line 76: ordered row 35 uses page 36",
+        "line 77: ordered row 36 uses page 37",
+        "line 78: ordered row 37 uses page 40",
+        "line 79: ordered row 38 uses page 41",
+        "line 80: ordered row 39 uses page 42",
+        "line 81: ordered row 40 uses page 43",
+        "line 82: ordered row 41 uses page 44",
+        "line 83: ordered row 42 uses page 45",
+        "line 84: ordered row 43 uses page 46",
+        "line 85: ordered row 44 uses page 47",
+        "line 86: ordered row 45 uses page 48",
+        "line 87: ordered row 46 uses page 49",
+        "line 88: ordered row 47 uses page None",
+        "line 89: ordered row 48 uses page 50",
+        "line 90: ordered row 49 uses page 51",
+        "line 91: ordered row 50 uses page None",
+        "line 92: ordered row 51 uses page 52",
+        "line 93: ordered row 52 uses page 53",
+        "line 94: ordered row 53 uses page None",
+        "line 97: ordered row 56 uses page None",
+        "line 98: ordered row 57 uses page 56",
+        "line 99: ordered row 58 uses page 57",
+        "line 100: ordered row 59 uses page None",
+        "line 101: ordered row 60 uses page 58"
+      ],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output."
+      ],
+      "draft": "KN4課堂PPT/L2_三口之家是理想的家庭吗/KỸ NĂNG NÓI 4-L2_HTML_PPT製作稿.md"
+    },
+    {
+      "scope": "draft structure only",
+      "sha256": "df88ca20b1062be557e745d8691bb9e74debc26e72d36513e0c7457a99ca8dc0",
+      "slideCount": 67,
+      "errors": [
+        "line 93: ordered row 51 uses page 52",
+        "line 94: ordered row 52 uses page 51",
+        "line 95: duplicate page 52 / output filename collision",
+        "line 95: duplicate filename slide-52.html",
+        "line 95: ordered row 53 uses page 52",
+        "line 96: ordered row 54 uses page 53",
+        "line 97: ordered row 55 uses page 54",
+        "line 98: ordered row 56 uses page 55",
+        "line 99: ordered row 57 uses page 56",
+        "line 100: ordered row 58 uses page 57",
+        "line 101: ordered row 59 uses page 58",
+        "line 102: ordered row 60 uses page 59",
+        "line 103: ordered row 61 uses page 60",
+        "line 104: ordered row 62 uses page 61",
+        "line 105: ordered row 63 uses page 62",
+        "line 106: ordered row 64 uses page 63",
+        "line 107: duplicate page 63 / output filename collision",
+        "line 107: duplicate filename slide-63.html",
+        "line 107: ordered row 65 uses page 63",
+        "line 108: ordered row 66 uses page 64",
+        "line 109: ordered row 67 uses page 65",
+        "line 18: stated total 66; actual production rows 67"
+      ],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output.",
+        "Draft contains pending confirmation; structural success does not approve content."
+      ],
+      "draft": "KN4課堂PPT/L3_刷卡消费，享受生活/KỸ NĂNG NÓI 4-L3_HTML_PPT製作稿.md"
+    }
+  ],
+  "after": [
+    {
+      "scope": "draft structure only",
+      "sha256": "e8663f5a0f901f8d8266f8f631ef35a12291e599493b8b8f30770ee5fd90cfea",
+      "slideCount": 50,
+      "errors": [],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output."
+      ],
+      "draft": "KN2課堂PPT/L1_我哪儿都没去过/KỸ NĂNG NÓI 2-L1_HTML_PPT製作稿.md"
+    },
+    {
+      "scope": "draft structure only",
+      "sha256": "018396da9dc106bec6af104f9ff815b0f0bf4bf167ea27f080fcc8891bf05a5e",
+      "slideCount": 57,
+      "errors": [],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output."
+      ],
+      "draft": "KN2課堂PPT/L2_晚上早点儿睡/KỸ NĂNG NÓI 2-L2_HTML_PPT製作稿.md"
+    },
+    {
+      "scope": "draft structure only",
+      "sha256": "bfff316b9f61fc3f263e41b1d772108b8c287c75cd41a650d318741f579f15c8",
+      "slideCount": 60,
+      "errors": [],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output."
+      ],
+      "draft": "KN4課堂PPT/L1_在家靠父母，出门靠朋友/KỸ NĂNG NÓI 4-L1_HTML_PPT製作稿.md"
+    },
+    {
+      "scope": "draft structure only",
+      "sha256": "922102c86c49a974199dfb3501d47fa2e9cdaf25d587269ce95a5b8366e7db8b",
+      "slideCount": 60,
+      "errors": [
+        "line 88: page number must be an integer; found '49.1'",
+        "line 91: page number must be an integer; found '51.1'",
+        "line 94: page number must be an integer; found '53.1'",
+        "line 97: page number must be an integer; found '55.1'",
+        "line 100: page number must be an integer; found '57.1'",
+        "line 58: ordered row 17 uses page 18",
+        "line 59: ordered row 18 uses page 19",
+        "line 60: ordered row 19 uses page 20",
+        "line 61: ordered row 20 uses page 21",
+        "line 62: ordered row 21 uses page 22",
+        "line 63: ordered row 22 uses page 23",
+        "line 64: ordered row 23 uses page 24",
+        "line 65: ordered row 24 uses page 25",
+        "line 66: ordered row 25 uses page 26",
+        "line 67: ordered row 26 uses page 27",
+        "line 68: ordered row 27 uses page 28",
+        "line 69: ordered row 28 uses page 29",
+        "line 70: ordered row 29 uses page 30",
+        "line 71: ordered row 30 uses page 31",
+        "line 72: ordered row 31 uses page 32",
+        "line 73: ordered row 32 uses page 33",
+        "line 74: ordered row 33 uses page 34",
+        "line 75: ordered row 34 uses page 35",
+        "line 76: ordered row 35 uses page 36",
+        "line 77: ordered row 36 uses page 37",
+        "line 78: ordered row 37 uses page 40",
+        "line 79: ordered row 38 uses page 41",
+        "line 80: ordered row 39 uses page 42",
+        "line 81: ordered row 40 uses page 43",
+        "line 82: ordered row 41 uses page 44",
+        "line 83: ordered row 42 uses page 45",
+        "line 84: ordered row 43 uses page 46",
+        "line 85: ordered row 44 uses page 47",
+        "line 86: ordered row 45 uses page 48",
+        "line 87: ordered row 46 uses page 49",
+        "line 88: ordered row 47 uses page None",
+        "line 89: ordered row 48 uses page 50",
+        "line 90: ordered row 49 uses page 51",
+        "line 91: ordered row 50 uses page None",
+        "line 92: ordered row 51 uses page 52",
+        "line 93: ordered row 52 uses page 53",
+        "line 94: ordered row 53 uses page None",
+        "line 97: ordered row 56 uses page None",
+        "line 98: ordered row 57 uses page 56",
+        "line 99: ordered row 58 uses page 57",
+        "line 100: ordered row 59 uses page None",
+        "line 101: ordered row 60 uses page 58"
+      ],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output."
+      ],
+      "draft": "KN4課堂PPT/L2_三口之家是理想的家庭吗/KỸ NĂNG NÓI 4-L2_HTML_PPT製作稿.md"
+    },
+    {
+      "scope": "draft structure only",
+      "sha256": "df88ca20b1062be557e745d8691bb9e74debc26e72d36513e0c7457a99ca8dc0",
+      "slideCount": 67,
+      "errors": [
+        "line 93: ordered row 51 uses page 52",
+        "line 94: ordered row 52 uses page 51",
+        "line 95: duplicate page 52 / output filename collision",
+        "line 95: duplicate filename slide-52.html",
+        "line 95: ordered row 53 uses page 52",
+        "line 96: ordered row 54 uses page 53",
+        "line 97: ordered row 55 uses page 54",
+        "line 98: ordered row 56 uses page 55",
+        "line 99: ordered row 57 uses page 56",
+        "line 100: ordered row 58 uses page 57",
+        "line 101: ordered row 59 uses page 58",
+        "line 102: ordered row 60 uses page 59",
+        "line 103: ordered row 61 uses page 60",
+        "line 104: ordered row 62 uses page 61",
+        "line 105: ordered row 63 uses page 62",
+        "line 106: ordered row 64 uses page 63",
+        "line 107: duplicate page 63 / output filename collision",
+        "line 107: duplicate filename slide-63.html",
+        "line 107: ordered row 65 uses page 63",
+        "line 108: ordered row 66 uses page 64",
+        "line 109: ordered row 67 uses page 65",
+        "line 18: stated total 66; actual production rows 67"
+      ],
+      "warnings": [
+        "Existing completion/QA claims were not verified against rendered output.",
+        "Draft contains pending confirmation; structural success does not approve content."
+      ],
+      "draft": "KN4課堂PPT/L3_刷卡消费，享受生活/KỸ NĂNG NÓI 4-L3_HTML_PPT製作稿.md"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>發展漢語 · 課程編輯器</title><link rel="stylesheet" href="editor.css"></head><body>
+<header><a class="brand" href="#">發展漢語 <span>課程編輯器</span></a><input id="deck-title" aria-label="課程名稱" value="未命名課程"><span id="save-status" role="status">正在開啟…</span><button id="save">下載課程檔</button><button id="export">匯出簡報</button><button id="present" class="primary">開始放映 ▷</button></header>
+<nav class="toolbar" aria-label="編輯工具"><button id="new">新課程</button><button id="open">開啟課程</button><button id="draft">匯入製作稿</button><span class="divider"></span><button id="undo" title="復原 Ctrl/⌘ Z">↶ 復原</button><button id="redo" title="重做 Ctrl/⌘ Shift Z">↷ 重做</button><span class="divider"></span><button data-add="text">＋ 文字</button><button id="add-image">＋ 圖片</button><button data-add="shape">＋ 色塊</button><button data-add="flashcard">＋ 翻牌</button><button data-add="reveal">＋ 答案</button><div class="toolbar-end"><label><input id="snap" type="checkbox" checked> 對齊格線</label><button id="stacked-layout">本頁改為上下版面</button><button id="print">列印 / PDF</button></div></nav>
+<main><aside class="slides-pane"><div class="pane-heading"><h2>投影片</h2><button id="add-slide" aria-label="新增投影片">＋</button></div><div id="slide-list"></div><div class="slide-actions"><button id="slide-up" title="投影片上移">↑</button><button id="slide-down" title="投影片下移">↓</button><button id="copy-slide">複製</button><button id="delete-slide">刪除</button></div></aside>
+<section class="workspace" aria-label="投影片工作區"><div class="workspace-heading"><span id="page-label">1 / 1</span><span>拖曳移動 · 拖曳右下角調整大小 · 雙擊編輯文字</span></div><div id="stage-wrap"><div id="stage" class="slide-canvas" tabindex="0" aria-label="投影片畫布"></div></div><div id="overflow" role="status"></div><details class="notes-panel"><summary>教師備註 <span>不會出現在放映中</span></summary><textarea id="notes" aria-label="教師備註" placeholder="記錄教學提示、原稿內容或待確認項目"></textarea></details></section>
+<aside class="inspector"><div class="pane-heading"><h2>格式</h2><span id="selected-kind">投影片</span></div><section><label>投影片名稱<input id="slide-title"></label><label>課本來源<input id="source" placeholder="Sách giáo khoa P13–14"></label><label class="inline-label">畫布顏色<input id="slide-bg" type="color" value="#f8f7f3"></label></section><div id="no-selection">選取文字、圖片或卡片，即可調整位置與格式。</div><fieldset id="element-controls" hidden><legend>物件設定</legend><label>文字<textarea id="text" rows="5"></textarea></label><label id="back-label">背面 / 答案<textarea id="back-text" rows="3"></textarea></label><div class="grid"><label>X<input id="x" type="number" min="0" max="940"></label><label>Y<input id="y" type="number" min="0" max="520"></label><label>寬<input id="w" type="number" min="20" max="960"></label><label>高<input id="h" type="number" min="20" max="540"></label></div><div class="grid"><label>字級<input id="fontSize" type="number" min="8" max="150"></label><label>對齊<select id="align"><option value="left">靠左</option><option value="center">置中</option><option value="right">靠右</option></select></label><label>文字色<input id="color" type="color"></label><label>底色<input id="background" type="color"></label></div><label class="inline-label"><input id="bold" type="checkbox">粗體</label><label class="inline-label"><input id="locked" type="checkbox">鎖定位置</label><div class="grid"><button id="center-x">水平置中</button><button id="center-y">垂直置中</button><button id="front">移到最上層</button><button id="back">移到最下層</button><button id="duplicate">複製物件</button><button id="remove">刪除物件</button></div><button id="replace-image" hidden>替換圖片</button></fieldset></aside></main>
+<div id="toast" role="status" hidden></div><input type="file" id="file" accept=".json" hidden><input type="file" id="md-file" accept=".md" hidden><input type="file" id="image-file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+<dialog id="presenter"><div id="present-wrap"><div id="present-stage" class="slide-canvas"></div></div><nav><button id="exit-present">結束放映 Esc</button><button id="fullscreen">全螢幕</button><button id="prev">← 上一頁</button><span id="present-count"></span><button id="next">下一頁 →</button></nav></dialog>
+<dialog id="recent"><h2>開啟課程</h2><p>繼續編輯最近的課程，或開啟已下載的課程檔。</p><div id="recent-list"></div><div class="recent-actions"><button id="open-file">選擇課程檔</button><button id="close-recent">取消</button></div></dialog>
+<div id="workflow-bar"><span id="workflow-status">先整理教材，再生成投影片</span><button id="materials">教材與課程資料庫</button><button id="generate">從資料庫生成 PPT</button><button id="check-course">檢查交付</button></div>
+<dialog id="materials-dialog" class="course-dialog">
+ <div class="course-heading"><div><h2>教材與課程資料庫</h2><p>讀取原教材 → 整理並核對內容 → 生成投影片 → 有需要才手動微調</p></div><button id="close-materials">關閉</button></div>
+ <div class="course-columns">
+  <section><h3>1. 原教材與頁碼</h3><label>課程<select id="course-level"><option>KN2</option><option>KN4</option></select></label>
+   <p>先保留教材文字及原頁碼。掃描頁須先 OCR 並核對，不把空白文字當成已讀取。</p>
+   <button id="import-material">讀取文字教材 / 教材包</button><input id="material-file" type="file" accept=".txt,.md,.json" hidden>
+   <p>PDF 可先用專案的教材抽取工具整理成教材包，再由此開啟。</p>
+   <label>教材名稱<input id="material-name" placeholder="教材檔名或書名"></label>
+   <label>原教材頁碼<input id="material-page" placeholder="例如 13，請以課本印刷頁碼為準"></label>
+   <label>本頁原文<textarea id="material-text" rows="7" placeholder="貼上或讀取本頁教材原文"></textarea></label><button id="add-material-page">保存這頁教材</button>
+   <div id="source-pages"></div>
+   <details><summary>單字資料庫查詢</summary><p>核對拼音與超綱詞的輔助資料；結果不能代替教師核對。</p><input id="vocabulary-query" aria-label="查詢單字" placeholder="輸入要查的詞"><div id="vocabulary-results"></div></details>
+  </section>
+  <section><h3>2. 課程內容</h3><p>新增練習也要連結教材依據；儲存順序就是生成順序。</p><button id="new-content">新增教材內容</button><button id="new-exercise">新增練習</button><div id="content-list"></div></section>
+  <section id="content-form"><h3>3. 核對這一項內容</h3><p id="content-empty">先選取或新增課程內容。</p><fieldset id="content-fields" hidden><legend>課程內容</legend>
+   <label>名稱<input id="content-title"></label>
+   <label>頁型<select id="content-type"><option value="cover">封面／學習目標</option><option value="content">課文／內容</option><option value="vocabulary">生詞</option><option value="grammar">語法</option><option value="exercise">練習</option><option value="task">口語任務</option></select></label>
+   <label>內容來源<select id="content-origin"><option value="textbook">教材整理</option><option value="supplement">教師補充／新增練習</option><option value="legacy">舊稿待整理</option></select></label>
+   <label>教材依據<select id="content-source"></select></label><label>原教材頁碼（多頁用逗號分隔）<input id="content-pages"></label>
+   <label>本頁學習目標<input id="content-objective" placeholder="學生完成後能做什麼？"></label>
+   <label>練習題型<select id="content-exercise"><option value="completion">完成句子</option><option value="substitution">替換練習</option><option value="question-answer">完整句問答</option><option value="dialogue">對話練習</option><option value="speaking">口語輸出</option><option value="matching">配對</option><option value="multiple-choice">選擇題</option><option value="vocabulary-drill">生詞小練習（KN2 須指定例外）</option></select></label>
+   <label>教師指定例外與原因<input id="content-exception" placeholder="只有與原課程規則不同時填寫"></label>
+   <label id="instruction-field">越南語操作說明<textarea id="content-instruction" rows="3" placeholder="說明學生要做什麼、如何作答及完成條件"></textarea></label>
+   <label id="explanation-field">越南語語法說明<textarea id="content-explanation" rows="3"></textarea></label>
+   <label id="pinyin-field">生詞拼音<input id="content-pinyin"></label>
+   <label>題幹／正文／生詞<textarea id="content-body" rows="4"></textarea></label>
+   <label id="answer-field">答案／生詞背面<textarea id="content-answer" rows="3" placeholder="練習填完整句答案；生詞填兩行：越南語詞性、越南語翻譯"></textarea></label>
+   <label id="examples-field">例句<textarea id="content-examples" rows="3"></textarea></label>
+   <label>正文與答案中的超綱詞（每行：詞 | 拼音 | 越南語）<textarea id="content-annotations" rows="3" placeholder="培训 | péixùn | đào tạo"></textarea></label>
+   <div id="extra-blocks"></div>
+   <label class="review-confirm"><input id="review-confirm" type="checkbox">我已對照原教材，核對題目與答案、簡體中文／越南語、課程程度、超綱標注和學生操作說明。</label><button id="approve-content">記錄本項內容已核對</button><p id="content-review-status"></p>
+   <div class="content-actions"><button id="content-up">上移</button><button id="content-down">下移</button><button id="delete-content">刪除此項（可復原）</button></div>
+  </fieldset></section>
+ </div>
+ <div id="course-issues" role="status"></div><div class="course-footer"><button id="download-package">下載教材包與資料庫</button><button id="generate-from-dialog" class="primary">核對完成，生成 PPT</button></div>
+</dialog>
+<script src="model.js"></script><script src="workflow.js"></script><script src="editor.js"></script><script src="workflow-ui.js"></script></body></html>

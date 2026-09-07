@@ -18,3 +18,7 @@ ai-teaching-material-system-main/
 
 # GitHub rejects files larger than 100 MB
 KỸ NĂNG NÓI 1-GIÁO TRÌNH GIẢNG DẠY.pdf
+
+# Python draft-check cache
+__pycache__/
+*.pyc
